@@ -2,8 +2,13 @@ const display = document.querySelector(".display");
 display.textContent = "";
 let needscls = false;
 
+let click = new Audio("audio/click.m4a");
+let chunk = new Audio("audio/chunk.m4a");
+let ding = new Audio("audio/ding.m4a");
+
 function CLS() {
     display.textContent = "";
+    chunk.play();
     needscls = false;
 }
 
@@ -13,6 +18,7 @@ function setOpFunc(clame, sign) {
         function(event) {
             needscls = false;
             display.textContent += sign;
+            chunk.play();
         }
     );
 }
@@ -24,6 +30,7 @@ function setNumFunc(clame, num) {
             if(needscls)
                 CLS();
             display.textContent += num;
+            click.play();
         }
     );
 }
@@ -35,6 +42,7 @@ document.querySelector(".evaluate").addEventListener(
     function(event) {
         display.textContent = eval(display.textContent);
         needscls = true;
+        ding.play();
     }
 );
 
