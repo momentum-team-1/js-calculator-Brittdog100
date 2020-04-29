@@ -1,0 +1,20 @@
+.row div {
+    display: inline-block;
+    background-color: green;
+    width: 32px;
+    border-color: darkgray;
+    text-align: center;
+    color: white;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.row .display {
+    width: 96px;
+}
+
+.row div:hover {
+    background-color: lightgreen;
+}
