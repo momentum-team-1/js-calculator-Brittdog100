@@ -1,7 +1,7 @@
 .row div {
     display: inline-block;
     background-color: green;
-    width: 32px;
+    width: 64px;
     border-color: darkgray;
     text-align: center;
     color: white;
@@ -9,10 +9,14 @@
     margin-right: 0;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family: "Comic Sans MS";
+    font-size: 16px;
 }
 
 .row .display {
-    width: 96px;
+    min-width: 196px;
+    font-size: 100%;
+    text-align: right;
 }
 
 .row div:hover {
